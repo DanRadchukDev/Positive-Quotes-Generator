@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     "Do or do not. There is no try",
     "Creativity is a wild mind and a disciplined eye",
     "You can’t wait for inspiration. You have to go after it with a club",
-    "A peacock that rests on his tail feathers is just another turkey"]
+    "A peacock that rests on his tail feathers is just another turkey",
+    "Bla bla bla"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
