@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,30 +13,33 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Positive_Quotes_Generator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to my first iOS app with some positive quotes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtm-gb-Edr">
-                                <rect key="frame" x="57" y="90" width="285" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to my first iOS app with some positive quotes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtm-gb-Edr">
+                                <rect key="frame" x="30" y="89" width="370" height="76.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="FJn-Fa-q0I"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="z4C-gk-HPn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="2" height="1"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FJn-Fa-q0I"/>
+                                        <exclude reference="z4C-gk-HPn"/>
+                                    </mask>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Whatever you do, always give 100%. Unless you’re donating blood." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vU5-2g-kQh">
-                                <rect key="frame" x="36" y="235" width="331" height="362"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="2" height="1"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3S-Hh-qGz">
-                                <rect key="frame" x="91" y="618" width="208" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3S-Hh-qGz">
+                                <rect key="frame" x="151" y="798" width="128" height="70"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="ydo-0d-H2V"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Click me!">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
@@ -51,9 +54,44 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FP4-YK-dwT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whatever you do, always give 100%. Unless you’re donating blood." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vU5-2g-kQh">
+                                <rect key="frame" x="30" y="409.33333333333331" width="370" height="113.66666666666669"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="2" height="1"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vU5-2g-kQh" secondAttribute="trailing" constant="30" id="3da-qg-qHM"/>
+                            <constraint firstItem="vU5-2g-kQh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="47O-8g-haZ"/>
+                            <constraint firstItem="T3S-Hh-qGz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9cV-ag-uu9"/>
+                            <constraint firstItem="vU5-2g-kQh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="B8u-mH-qXt"/>
+                            <constraint firstItem="Mtm-gb-Edr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DsS-ha-ptx"/>
+                            <constraint firstItem="Mtm-gb-Edr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="EMv-CL-yE7"/>
+                            <constraint firstItem="vU5-2g-kQh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ESi-GA-5gh"/>
+                            <constraint firstItem="Mtm-gb-Edr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Ejx-CJ-d6Y"/>
+                            <constraint firstItem="vU5-2g-kQh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Hz9-sX-HbQ"/>
+                            <constraint firstItem="vU5-2g-kQh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="-482.66666666666669" id="P9k-mq-vED"/>
+                            <constraint firstItem="vU5-2g-kQh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uog-yW-yQu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vU5-2g-kQh" secondAttribute="trailing" constant="30" id="ixg-Sa-l5o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T3S-Hh-qGz" secondAttribute="bottom" constant="30" id="kDG-PK-uBr"/>
+                            <constraint firstItem="T3S-Hh-qGz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-100" id="pQW-lD-4uT"/>
+                            <constraint firstAttribute="trailing" secondItem="Mtm-gb-Edr" secondAttribute="trailing" constant="30" id="xGt-F9-VDE"/>
+                            <constraint firstAttribute="trailing" secondItem="vU5-2g-kQh" secondAttribute="trailing" constant="40" id="z6b-0F-o0h"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3da-qg-qHM"/>
+                                <exclude reference="47O-8g-haZ"/>
+                                <exclude reference="Hz9-sX-HbQ"/>
+                                <exclude reference="P9k-mq-vED"/>
+                                <exclude reference="Uog-yW-yQu"/>
+                                <exclude reference="z6b-0F-o0h"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="label" destination="vU5-2g-kQh" id="NEl-NS-GmJ"/>
