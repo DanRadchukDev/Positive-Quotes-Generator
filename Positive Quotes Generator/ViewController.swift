@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
 
@@ -21,6 +22,10 @@ class ViewController: UIViewController {
     "A peacock that rests on his tail feathers is just another turkey",
     "Bla bla bla"]
     
+    
+       
+                                        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,10 +33,73 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         
-        let randoNumber = Int.random(in: 0...(arrayOfQuotes.count-1))
-        label.text = arrayOfQuotes[randoNumber]
+        
+        
+        /*let headers = [
+            "X-RapidAPI-Key": "25cfa9b20emsh7da0403d3812e35p16c5b4jsn4a9324c71aa7",
+            "X-RapidAPI-Host": "webknox-jokes.p.rapidapi.com"
+        ]
+
+        let request = NSMutableURLRequest(url: NSURL(string: "https://webknox-jokes.p.rapidapi.com/jokes/random?minRating=8&maxLength=100")! as URL,
+                                                cachePolicy: .useProtocolCachePolicy,
+                                            timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers*/
+
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://zenquotes.io/api/random")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                      timeoutInterval: 10.0)
+        
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                print(httpResponse)
+                
+                /* let Example = "{"id":4160,"joke":"Chuck Norris can compare apples to oranges."}"*/
+               struct JokeArr:Codable{
+                    let a: String
+                    let h: String
+                    let q: String
+                }
+                if let data = data{
+                           do{
+                               let tasks = try JSONDecoder().decode([JokeArr].self, from: data)
+                               tasks.forEach{ i in
+                                   DispatchQueue.main.async {
+                                       self.label.text = i.q}
+                               }
+                           }catch{
+                               print(error)
+                           }
+                       }
+                }
+                
+                /*if let data = data{
+                 let json = try? JSONSerialization.jsonObject(with:data,options: [])
+                 print(json)
+                 if let dictionary = json as? [String:Any] {
+                 if let result = dictionary["q"] as? String {
+                 // access individual value in di[]ctionary
+                 print(result)
+                 DispatchQueue.main.async {
+                 self.label.text = result
+                 }}}}*/
+            
+        })
+        
+        dataTask.resume()
+        
+        
+        /*let randoNumber = Int.random(in: 0...(arrayOfQuotes.count-1))
+        label.text = arrayOfQuotes[randoNumber]*/
         
     }
     
 }
+
 
