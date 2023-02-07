@@ -25,27 +25,13 @@ class ViewController: UIViewController {
     
        
                                         
-    
+    public var completionHandler:((String?)->Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+   
     @IBAction func buttonPressed(_ sender: UIButton) {
-        
-        
-        
-        /*let headers = [
-            "X-RapidAPI-Key": "25cfa9b20emsh7da0403d3812e35p16c5b4jsn4a9324c71aa7",
-            "X-RapidAPI-Host": "webknox-jokes.p.rapidapi.com"
-        ]
-
-        let request = NSMutableURLRequest(url: NSURL(string: "https://webknox-jokes.p.rapidapi.com/jokes/random?minRating=8&maxLength=100")! as URL,
-                                                cachePolicy: .useProtocolCachePolicy,
-                                            timeoutInterval: 10.0)
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers*/
-
         
         let request = NSMutableURLRequest(url: NSURL(string: "https://zenquotes.io/api/random")! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
@@ -71,6 +57,7 @@ class ViewController: UIViewController {
                                let tasks = try JSONDecoder().decode([JokeArr].self, from: data)
                                tasks.forEach{ i in
                                    DispatchQueue.main.async {
+                                       self.completionHandler?(i.q)
                                        self.label.text = i.q}
                                }
                            }catch{
