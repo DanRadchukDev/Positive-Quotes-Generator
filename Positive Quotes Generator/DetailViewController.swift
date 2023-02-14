@@ -9,24 +9,15 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet var label1: UILabel!
     
-    
-    @IBAction func back(){
-        
-        dismiss(animated: true)
-        
-    }
-    
-    @IBOutlet var label: UILabel!
-    
+    var joke: Joke?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let vc = storyboard?.instantiateViewController(withIdentifier: "mainView") as! ViewController
-        vc.completionHandler = { text in
-            self.label.text = text
-        }
-        // Do any additional setup after loading the view.
+        label1.text = joke?.q
+        label.text = joke?.a
     }
     
 
