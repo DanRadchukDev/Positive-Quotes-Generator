@@ -14,6 +14,7 @@
 		5406EDE1297FB64E008D205E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5406EDE0297FB64E008D205E /* Assets.xcassets */; };
 		5406EDE4297FB64E008D205E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5406EDE2297FB64E008D205E /* LaunchScreen.storyboard */; };
 		5406EE3629921F96008D205E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5406EE3529921F96008D205E /* DetailViewController.swift */; };
+		544D858E299B644D00819F58 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544D858D299B644D00819F58 /* Joke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5406EDE3297FB64E008D205E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5406EDE5297FB64E008D205E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5406EE3529921F96008D205E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		544D858D299B644D00819F58 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				5406EDDB297FB64D008D205E /* ViewController.swift */,
 				5406EE3529921F96008D205E /* DetailViewController.swift */,
 				5406EDDD297FB64D008D205E /* Main.storyboard */,
+				544D858D299B644D00819F58 /* Joke.swift */,
 				5406EDE0297FB64E008D205E /* Assets.xcassets */,
 				5406EDE2297FB64E008D205E /* LaunchScreen.storyboard */,
 				5406EDE5297FB64E008D205E /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5406EDDC297FB64D008D205E /* ViewController.swift in Sources */,
+				544D858E299B644D00819F58 /* Joke.swift in Sources */,
 				5406EDD8297FB64D008D205E /* AppDelegate.swift in Sources */,
 				5406EDDA297FB64D008D205E /* SceneDelegate.swift in Sources */,
 				5406EE3629921F96008D205E /* DetailViewController.swift in Sources */,
